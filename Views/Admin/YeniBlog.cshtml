@@ -1,0 +1,32 @@
+﻿
+@model  TravelTripProje2.Models.Siniflar.BLog
+@{
+    ViewBag.Title = "YeniBlog";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+
+<h2>Blog Güncelleme Sahnesi</h2>
+<br />
+
+
+@using (Html.BeginForm("BlogGuncelle", "Admin", FormMethod.Post))
+{
+
+    @Html.LabelFor(x => x.Id)
+    @Html.TextBoxFor(x => x.Id, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.Baslik)
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Tarih)
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Blogimage)
+    @Html.TextBoxFor(x => x.Blogimage, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Aciklama)
+    @Html.TextAreaFor(x => x.Aciklama, 15, 1, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Yeni Blog Ekle</button>
+}

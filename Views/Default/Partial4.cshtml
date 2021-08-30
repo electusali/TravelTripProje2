@@ -1,0 +1,21 @@
+﻿
+@using TravelTripProje2.Models.Siniflar
+@model List<BLog>   
+
+<div class="padding1">
+    <h4>En Güzel Yerler</h4>
+    <div class="box-left">
+        @foreach (var i in Model)
+        {
+            <div class="bot-img">
+                <img src="@i.Blogimage" alt="" />
+            </div>
+            <div class="bot-desc">
+                <p>@i.Aciklama.Substring(0,50) </p>
+            </div>
+            <div class="clear"></div>
+           
+        }
+    </div>
+   
+</div>
